@@ -15,8 +15,16 @@
 
 <body>
   <div class="hero">
-    <div class="my-logo">
-      <img src="img/me.jpg" alt="Здесь мой фейс, но походу лагает">
+    <div class="call-me">
+      <div class="my-logo">
+        <img src="img/me.jpg" alt="Здесь мой фейс, но походу лагает">
+      </div>
+      <div class="phone">
+        <button class="my-phone" onclick="showPhoneNumber()">
+          <span>Phone number</span>
+        </button>
+        <p class="my-phone-number" id="my-phone-number"></p>
+      </div>
     </div>
     <div class="my-main-data">
       <h1 class="my-name">
@@ -24,12 +32,6 @@
           Mikhail <span class="letter-red">Hr</span>amtsov</a>
       </h1>
       <p class="my-description">Web developer</p>
-    </div>
-    <div class="phone">
-      <button class="my-phone" onclick="showPhoneNumber()">
-        <span>Phone number</span>
-      </button>
-      <p class="my-phone-number" id="my-phone-number"></p>
     </div>
   </div>
   <script src="script.js"></script>
