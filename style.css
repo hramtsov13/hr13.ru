@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.my-logo {
+
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.my-main-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
