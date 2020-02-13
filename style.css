@@ -6,8 +6,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   font-family: 'Germany', sans-serif;
 }
 
@@ -20,44 +19,46 @@ body {
   padding: 10vh;
 }
 
-.my-main-data,
+.my-main-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .call-me {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
-  width: 20vw;
-}
-
-.call-me {
-  color: #000000;
-  padding: 20px 0px 20px 0px;
-  border: 1px solid transparent;
+  padding: 20px 10px;
   border-radius: 10px;
   box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
     -2px -2px 12px rgba(255, 255, 255, 0.5),
     inset 2px 2px 4px rgba(255, 255, 255, 0.1),
     2px 2px 8px rgba(0, 0, 0, 0.15);
   margin-right: 30px;
+  width: 50%;
+  height: 100%;
 }
 
 .my-logo {
   margin-bottom: 15px;
+  height: 100%;
 }
 
-
-.my-logo img {
+.my-logo {
   background-image: url("img/Hackeshermarkt.jpeg");
-  width: 300px;
-  height: 400px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
   border: 5px solid #ffffff;
   border-radius: 10px;
+  width: 100%;
 }
+
 
 .my-phone {
   font-family: "Germany", sans-serif;
-  align-self: center;
-  align-content: center;
   font-weight: 900;
   font-size: 15px;
   letter-spacing: 2px;
@@ -65,13 +66,12 @@ body {
   cursor: pointer;
   padding: 20px 15px;
   background-color: #ffffff;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 10px;
   box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
     -2px -2px 12px rgba(255, 255, 255, 0.5),
     inset 2px 2px 4px rgba(255, 255, 255, 0.1),
     2px 2px 8px rgba(0, 0, 0, 0.15);
-  position: relative;
 }
 
 /*Button animation*/
@@ -84,22 +84,15 @@ body {
 }
 
 .my-phone:hover span {
-  display: inline-block;
   transform: scale(0.95);
 }
 
-#my-phone-number {
+.my-phone-number {
   display: none;
   color: #dc143c;
   margin: 0;
-}
-
-#my-phone-number::after {
-  content: "+7(999)587-67-67";
   font-size: 18px;
-  padding-top: 5px;
-  position: absolute;
-  right: 260px;
+
 }
 
 .my-phone:focus {
@@ -111,6 +104,7 @@ body {
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
+  align-self: center;
 }
 
 .my-main-data .my-name a {
@@ -127,9 +121,8 @@ body {
   font-weight: 400;
   color: #00000081;
   margin: 0;
+  align-self: center;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 @font-face {
   font-family: "Germany";
