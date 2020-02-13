@@ -2,9 +2,9 @@
 
 function showPhoneNumber() {
   var x = document.getElementById("my-phone-number").style;
-  if (x.display == "none" || x.display == "") {
-    x.display = "block";
+  if (x.visibility == "hidden" || x.visibility == "") {
+    x.visibility = "visible";
   } else {
-    x.display = "none";
+    x.display = "hidden";
   }
 }

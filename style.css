@@ -19,13 +19,6 @@ body {
   padding: 10vh;
 }
 
-.my-main-data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .call-me {
   display: flex;
   flex-direction: column;
@@ -44,20 +37,16 @@ body {
 .my-logo {
   margin-bottom: 15px;
   height: 100%;
-}
-
-.my-logo {
+  width: 100%;
   background-image: url("img/Hackeshermarkt.jpeg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;
-  border: 5px solid #ffffff;
   border-radius: 10px;
-  width: 100%;
 }
 
-
 .my-phone {
+  display: flex;
   font-family: "Germany", sans-serif;
   font-weight: 900;
   font-size: 15px;
@@ -88,23 +77,35 @@ body {
 }
 
 .my-phone-number {
-  display: none;
+  display: block;
+  visibility: hidden;
   color: #dc143c;
   margin: 0;
   font-size: 18px;
-
+  bottom: 0;
 }
 
 .my-phone:focus {
   outline: none;
 }
 
+/*My main data block*/
+
+.my-main-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
 .my-main-data .my-name {
+  display: flex;
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
-  align-self: center;
 }
 
 .my-main-data .my-name a {
