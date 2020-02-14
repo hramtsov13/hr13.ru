@@ -82,6 +82,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 }
 
 .my-phone {
+  display: flex;
   font-family: "Germany", sans-serif;
   font-weight: 900;
   font-size: 15px;
@@ -122,10 +123,6 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*My main data block(.my-name and .my-description)*/
 
 .my-main-data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 50%;
   flex-wrap: wrap;
   padding: 0 20px;
@@ -188,7 +185,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 @font-face {
   font-family: "Germany";
-  src: url("fonts/Germany/Germany.ttf") format("truetype");
+  src: url("fonts/Germany/Germany.woff") format("woff"), url("fonts/Germany/Germany.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
