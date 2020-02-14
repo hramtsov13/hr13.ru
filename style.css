@@ -21,12 +21,11 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 .root {
   display: flex;
-  height: 100%;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  height: 100%;
   padding: 10vh;
-  padding-right: 0;
 }
 
 /*General block for the Left side(.test) of the 1st section(*/
@@ -43,7 +42,6 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 .call-me {
   width: 50%;
-  height: 100%;
   border-radius: 10px;
   box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
     0px -4px 12px rgba(255, 255, 255, 0.5),
@@ -53,15 +51,14 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 /*Bclok with the picture of mine(.my-logo)*/
 
-.my-logo {
-  width: 100%;
-  height: calc(100% - 100px);
-}
 
-.my-logo img {
+
+.my-logo {
+  display: block;
   width: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  transition: 0.5s;
   filter: grayscale(100%), contrast(15%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -70,19 +67,18 @@ Image(.my-logo), Button(.phone) and some texts*/
   -webkit-filter: grayscale(1);
 }
 
-.my-logo:hover img {
+.my-logo:hover {
   filter: none;
-  transition: 0.5s;
 }
 
-/*The button(.phone) block*/
+/*The button(.my-phone) block*/
 
-.phone {
+.actions {
+  text-align: center;
   padding: 10px 0;
 }
 
-.my-phone {
-  display: flex;
+.show-phone {
   font-family: "Germany", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -90,6 +86,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   background-color: #fff;
   text-align: center;
   cursor: pointer;
+  outline: none;
   padding: 20px 15px;
   border: none;
   border-radius: 10px;
@@ -101,23 +98,23 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 /*Button animation*/
 
-.my-phone:hover {
+.show-phone:hover {
   color: #00000081;
 }
 
-.my-phone:active {
+.show-phone:active {
   box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
     inset -2px -2px 12px rgba(255, 255, 255, 0.5),
     inset 2px 2px 4px rgba(255, 255, 255, 0.1),
     inset 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.my-phone:active span {
-  transform: scale(0.95);
+.show-phone span {
+  display: block;
 }
 
-.my-phone:focus {
-  outline: none;
+.show-phone:active span {
+  transform: scale(0.95);
 }
 
 /*My main data block(.my-name and .my-description)*/
@@ -125,7 +122,6 @@ Image(.my-logo), Button(.phone) and some texts*/
 .my-main-data {
   width: 50%;
   flex-wrap: wrap;
-  padding: 0 20px;
   height: 100%;
   position: relative;
 }
@@ -157,10 +153,12 @@ Image(.my-logo), Button(.phone) and some texts*/
   color: #00000081;
   margin: 0;
   align-self: center;
+  margin-bottom: 5px;
 }
 
 .my-phone-number {
   visibility: hidden;
+  text-decoration: none;
   font-size: 20px;
   color: #dc143c;
   margin: 0;
@@ -169,11 +167,19 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 /*Media query*/
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
+
+  body {
+    overflow: scroll;
+  }
+
   .root {
     flex-direction: column-reverse;
     justify-content: flex-end;
     padding: 5vh;
+    width: 100%;
+    height: unset;
+    padding: 10vh 2vh;
   }
 
   .section {
@@ -181,34 +187,54 @@ Image(.my-logo), Button(.phone) and some texts*/
   }
 
   .call-me {
-    height: 50%;
+    width: 100%;
   }
 
   .my-main-data {
-    height: 30%;
+    margin-bottom: 40px;
   }
 
-  .phone {
-    padding: 0;
-  }
-
-  .my-phone {
-    display: flex;
-    font-family: "Germany",
-      sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 2px;
-    background-color: #fff;
-    text-align: center;
+  .show-phone {
+    padding: 15px 7px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
+    box-shadow:
       0px -4px 40px rgba(255, 255, 255, 0.5),
       inset 0px 2px 80px rgba(255, 255, 255, 0.1),
       0px 2px 14px rgba(0, 0, 0, 0.15)
   }
 
+  .my-main-data .my-name .attention {
+    color: #dc143c;
+  }
+
+}
+
+@media screen and (max-height: 480px) {
+
+  body {
+    overflow: scroll;
+  }
+
+  .root {
+    flex-direction: row;
+    height: 100%;
+    padding: 10vh 5vh;
+  }
+
+  .show-phone {
+    padding: 15px 7px;
+    border: none;
+    border-radius: 10px;
+    box-shadow:
+      0px -4px 40px rgba(255, 255, 255, 0.5),
+      inset 0px 2px 80px rgba(255, 255, 255, 0.1),
+      0px 2px 14px rgba(0, 0, 0, 0.15)
+  }
+
+  .my-main-data .my-name .attention {
+    color: #dc143c;
+  }
 }
 
 /*Fonts*/

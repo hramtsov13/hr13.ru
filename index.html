@@ -7,6 +7,10 @@
   <meta charset="keywords" content="Михаил Храмцов, веб-разработчик, личное портфолио, портфолио, web developer">
   <meta charset="description"
     content="Сделаем сайт или что ты там хотел. Здесь можно отследить мои достижения и другие важные моменты. И заказать разработку.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#dc143c">
+  <meta name="msapplication-navbutton-color" content="#dc143c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#dc143c">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -17,12 +21,10 @@
 
   <div class="root">
     <!--Left block with Image and Button-->
-    <div class="section call-me">
-      <div class="section my-logo">
-        <img src="img/dalimuseum.jpg" alt="Михаил Храмцов в музее Сальвадора Дали в Берлине">
-      </div>
-      <div class="section phone">
-        <button class="my-phone" onclick="showPhoneNumber()">
+    <div class="call-me">
+      <img class="my-logo" src="img/dalimuseum.jpg" alt="Михаил Храмцов в музее Сальвадора Дали в Берлине">
+      <div class="actions">
+        <button class="show-phone" onclick="showPhoneNumber()">
           <span>Phone number</span>
         </button>
       </div>
@@ -36,7 +38,7 @@
         </a>
       </h1>
       <p class="my-description">Web developer</p>
-      <p class="section my-phone-number" id="my-phone-number">+7(999)587-67-67</p>
+      <a class="my-phone-number" href="tel:+79995876767" id="my-phone-number">+7(999)587-67-67</a>
     </div>
   </div>
 
