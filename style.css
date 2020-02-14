@@ -1,3 +1,5 @@
+/*Main Settings*/
+
 * {
   box-sizing: border-box;
 }
@@ -14,6 +16,9 @@ body {
   overflow: hidden;
 }
 
+/*Setting for general block(.hero) on the 1st section includes following containers: 
+Image(.my-logo), Button(.phone) and some texts*/
+
 .hero {
   display: flex;
   height: 100%;
@@ -24,6 +29,8 @@ body {
   padding-right: 0;
 }
 
+/*General block for the Left side(.test) of the 1st section(*/
+
 .test {
   display: flex;
   flex-direction: column;
@@ -32,6 +39,8 @@ body {
   width: 50%;
   height: 100%;
 }
+
+/*Block(.call-me) includes: image(.my-logo) and button(.phone) */
 
 .call-me {
   height: 100%;
@@ -44,6 +53,8 @@ body {
     inset 0px 4px 8px rgba(255, 255, 255, 0.1),
     0px 4px 8px rgba(0, 0, 0, 0.15);
 }
+
+/*Bclok with the picture of mine(.my-logo)*/
 
 .my-logo {
   display: flex;
@@ -60,6 +71,8 @@ body {
 
 }
 
+/*The button(.phone) block*/
+
 .phone {
   padding: 20px 0;
 }
@@ -67,7 +80,6 @@ body {
 .my-phone {
   display: flex;
   align-items: center;
-  flex-grow: 1;
   font-family: "Germany", sans-serif;
   font-weight: 900;
   font-size: 15px;
@@ -75,7 +87,6 @@ body {
   text-align: center;
   cursor: pointer;
   padding: 20px 15px;
-  background-color: #ffffff;
   border: none;
   border-radius: 10px;
   box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
@@ -98,7 +109,6 @@ body {
 }
 
 .my-phone:active span {
-  display: flex;
   transform: scale(0.95);
 }
 
@@ -106,7 +116,7 @@ body {
   outline: none;
 }
 
-/*My main data block*/
+/*My main data block(.my-name and .my-description)*/
 
 .my-main-data {
   display: flex;
@@ -120,6 +130,7 @@ body {
   position: relative;
 }
 
+/*
 .my-main-data::before {
   content: '13';
   display: block;
@@ -130,10 +141,11 @@ body {
   font-size: 400px;
   font-weight: bold;
   z-index: -1;
-  font-family: sans-serif;
+  font-family: 'Germany', sans-serif;
   color: #000000;
   opacity: .1;
 }
+*/
 
 .my-main-data .my-name {
   display: flex;
@@ -163,12 +175,14 @@ body {
 .my-phone-number {
   display: block;
   visibility: hidden;
-  text-align: center;
-  color: #dc143c;
-  margin: 0;
   font-size: 20px;
+  color: #dc143c;
+  text-align: center;
+  margin: 0;
   bottom: 0;
 }
+
+/*Fonts*/
 
 @font-face {
   font-family: "Germany";
