@@ -16,10 +16,10 @@ body {
   overflow: hidden;
 }
 
-/*Setting for general block(.hero) on the 1st section includes following containers: 
+/*Setting for general block(.root) on the 1st section includes following containers: 
 Image(.my-logo), Button(.phone) and some texts*/
 
-.hero {
+.root {
   display: flex;
   height: 100%;
   flex-direction: row;
@@ -42,7 +42,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*Block(.call-me) includes: image(.my-logo) and button(.phone) */
 
 .call-me {
-  width: 100%;
+  width: 50%;
   height: 100%;
   border-radius: 10px;
   box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
@@ -78,13 +78,13 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*The button(.phone) block*/
 
 .phone {
-  padding: 10px 0 0 0;
+  padding: 10px 0;
 }
 
 .my-phone {
   display: flex;
   font-family: "Germany", sans-serif;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 15px;
   letter-spacing: 2px;
   background-color: #fff;
@@ -170,15 +170,45 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*Media query*/
 
 @media screen and (max-width: 992px) {
-  .hero {
+  .root {
     flex-direction: column-reverse;
+    justify-content: flex-end;
     padding: 5vh;
   }
 
   .section {
-    width: auto;
+    width: 100%;
+  }
+
+  .call-me {
     height: 50%;
   }
+
+  .my-main-data {
+    height: 30%;
+  }
+
+  .phone {
+    padding: 0;
+  }
+
+  .my-phone {
+    display: flex;
+    font-family: "Germany",
+      sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 2px;
+    background-color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
+      0px -4px 40px rgba(255, 255, 255, 0.5),
+      inset 0px 2px 80px rgba(255, 255, 255, 0.1),
+      0px 2px 14px rgba(0, 0, 0, 0.15)
+  }
+
 }
 
 /*Fonts*/
