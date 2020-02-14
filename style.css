@@ -31,7 +31,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 /*General block for the Left side(.test) of the 1st section(*/
 
-.test {
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,10 +42,8 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*Block(.call-me) includes: image(.my-logo) and button(.phone) */
 
 .call-me {
+  width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-radius: 10px;
   box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
     0px -4px 12px rgba(255, 255, 255, 0.5),
@@ -56,15 +54,12 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*Bclok with the picture of mine(.my-logo)*/
 
 .my-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   height: calc(100% - 100px);
 }
 
 .my-logo img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   filter: grayscale(100%), contrast(15%);
@@ -72,8 +67,6 @@ Image(.my-logo), Button(.phone) and some texts*/
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
-  filter: url(desaturate.svg#greyscale);
-  filter: gray;
   -webkit-filter: grayscale(1);
 }
 
@@ -85,13 +78,10 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*The button(.phone) block*/
 
 .phone {
-  display: flex;
   padding: 10px 0 0 0;
 }
 
 .my-phone {
-  display: flex;
-  align-items: center;
   font-family: "Germany", sans-serif;
   font-weight: 900;
   font-size: 15px;
@@ -143,25 +133,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   position: relative;
 }
 
-/*
-.my-main-data::after {
-  content: '13';
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 10px;
-  font-weight: bold;
-  z-index: -1;
-  font-family: 'Germany', sans-serif;
-  color: #000000;
-  opacity: .1;
-}
-*/
-
 .my-main-data .my-name {
-  display: flex;
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 0;
@@ -191,11 +163,9 @@ Image(.my-logo), Button(.phone) and some texts*/
 }
 
 .my-phone-number {
-  display: block;
   visibility: hidden;
   font-size: 20px;
   color: #dc143c;
-  text-align: center;
   margin: 0;
   bottom: 0;
 }
@@ -205,6 +175,12 @@ Image(.my-logo), Button(.phone) and some texts*/
 @media screen and (max-width: 992px) {
   .hero {
     flex-direction: column-reverse;
+    padding: 5vh;
+  }
+
+  .section {
+    width: auto;
+    height: 50%;
   }
 }
 
