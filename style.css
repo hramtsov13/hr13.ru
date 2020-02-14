@@ -68,12 +68,26 @@ Image(.my-logo), Button(.phone) and some texts*/
   height: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  filter: grayscale(100%), contrast(15%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: url(desaturate.svg#greyscale);
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
 
+.my-logo:hover img {
+  filter: none;
+  transition: 0.5s;
 }
 
 /*The button(.phone) block*/
 
 .phone {
+  display: flex;
+  flex-grow: 1;
   padding: 20px 0;
 }
 
@@ -84,15 +98,16 @@ Image(.my-logo), Button(.phone) and some texts*/
   font-weight: 900;
   font-size: 15px;
   letter-spacing: 2px;
+  background-color: #fff;
   text-align: center;
   cursor: pointer;
   padding: 20px 15px;
   border: none;
   border-radius: 10px;
-  box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
-    0px -4px 12px rgba(255, 255, 255, 0.5),
-    inset 0px 4px 8px rgba(255, 255, 255, 0.1),
-    0px 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
+    0px -4px 40px rgba(255, 255, 255, 0.5),
+    inset 0px 2px 80px rgba(255, 255, 255, 0.1),
+    0px 2px 14px rgba(0, 0, 0, 0.15)
 }
 
 /*Button animation*/
@@ -162,6 +177,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 .my-main-data .my-name .letter-red:hover {
   color: #dc143c;
+  transition: 0.4s;
 }
 
 .my-main-data .my-description {
