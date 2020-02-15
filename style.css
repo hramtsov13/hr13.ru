@@ -25,7 +25,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding: 10vh;
+  padding: 10vh 0 10vh 10vh;
 }
 
 /*--------Class(.secttion) consists of flex-configurations--------*/
@@ -74,12 +74,13 @@ Image(.my-logo), Button(.phone) and some texts*/
 .actions {
   text-align: center;
   padding: 10px 0;
+  overflow: hidden;
 }
 
 .show-phone {
   font-family: "Germany", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1vmax;
   letter-spacing: 2px;
   background-color: #fff;
   text-align: center;
@@ -125,7 +126,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 }
 
 .my-main-data .my-name {
-  font-size: 25px;
+  font-size: 1.8vmax;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
@@ -140,16 +141,17 @@ Image(.my-logo), Button(.phone) and some texts*/
   transition: 0.4s;
 }
 
-.my-main-data .my-name .attention:hover {
+.attention:hover,
+.attention:hover~.attention {
   color: #dc143c;
 }
 
 .my-main-data .my-name .attention.lucky-number {
-  font-size: 18px;
+  font-size: 1.5vmax;
 }
 
 .my-main-data .my-description {
-  font-size: 15px;
+  font-size: 1.2vmax;
   font-weight: 400;
   color: #00000081;
   margin: 0;
@@ -159,7 +161,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 .my-phone-number {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.7vmax;
   color: #dc143c;
   margin: 0;
   bottom: 0;
@@ -202,12 +204,9 @@ Image(.my-logo), Button(.phone) and some texts*/
     width: 100%;
   }
 
-  .my-main-data {
-    margin-bottom: 20px;
-  }
-
   .show-phone {
     padding: 15px 7px;
+    font-size: 1.2vmax;
     border: none;
     border-radius: 10px;
     box-shadow:
@@ -216,8 +215,32 @@ Image(.my-logo), Button(.phone) and some texts*/
       0px 2px 14px rgba(0, 0, 0, 0.15)
   }
 
+  .show-phone:hover {
+    color: #000;
+  }
+
+  .my-main-data {
+    margin-bottom: 20px;
+  }
+
+  .my-main-data .my-name {
+    font-size: 2vmax;
+  }
+
   .my-main-data .my-name .attention {
     color: #dc143c;
+  }
+
+  .my-main-data .my-name .attention.lucky-number {
+    font-size: 1.7vmax;
+  }
+
+  .my-main-data .my-description {
+    font-size: 1.4vmax;
+  }
+
+  .my-phone-number {
+    font-size: 1.9vmax;
   }
 }
 
@@ -243,6 +266,10 @@ Image(.my-logo), Button(.phone) and some texts*/
       0px -4px 40px rgba(255, 255, 255, 0.5),
       inset 0px 2px 80px rgba(255, 255, 255, 0.1),
       0px 2px 14px rgba(0, 0, 0, 0.15)
+  }
+
+  .show-phone:hover {
+    color: #000;
   }
 
   .my-main-data .my-name .attention {
