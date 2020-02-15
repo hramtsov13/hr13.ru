@@ -28,7 +28,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   padding: 10vh;
 }
 
-/*General block for the Left side(.test) of the 1st section(*/
+/*--------Class(.secttion) consists of flex-configurations--------*/
 
 .section {
   display: flex;
@@ -38,7 +38,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   width: 50%;
 }
 
-/*Block(.call-me) includes: image(.my-logo) and button(.phone) */
+/*--------Block(.call-me) includes: image(.my-logo) and button(.phone)--------*/
 
 .call-me {
   width: 50%;
@@ -49,9 +49,7 @@ Image(.my-logo), Button(.phone) and some texts*/
     0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/*Bclok with the picture of mine(.my-logo)*/
-
-
+/*--------Block with the picture of mine(.my-logo)--------*/
 
 .my-logo {
   display: block;
@@ -71,7 +69,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   filter: none;
 }
 
-/*The button(.my-phone) block*/
+/*--------The button(.my-phone) block--------*/
 
 .actions {
   text-align: center;
@@ -96,7 +94,7 @@ Image(.my-logo), Button(.phone) and some texts*/
     0px 2px 14px rgba(0, 0, 0, 0.15)
 }
 
-/*Button animation*/
+/*--------Button animation--------*/
 
 .show-phone:hover {
   color: #00000081;
@@ -117,7 +115,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   transform: scale(0.95);
 }
 
-/*My main data block(.my-name and .my-description)*/
+/*--------My main data block(.my-name and .my-description)--------*/
 
 .my-main-data {
   width: 50%;
@@ -138,9 +136,12 @@ Image(.my-logo), Button(.phone) and some texts*/
   color: #000000;
 }
 
+.my-main-data .my-name .attention {
+  transition: 0.4s;
+}
+
 .my-main-data .my-name .attention:hover {
   color: #dc143c;
-  transition: 0.4s;
 }
 
 .my-main-data .my-name .attention.lucky-number {
@@ -157,7 +158,6 @@ Image(.my-logo), Button(.phone) and some texts*/
 }
 
 .my-phone-number {
-  visibility: hidden;
   text-decoration: none;
   font-size: 20px;
   color: #dc143c;
@@ -165,7 +165,19 @@ Image(.my-logo), Button(.phone) and some texts*/
   bottom: 0;
 }
 
-/*Media query*/
+/*--------For JS--------*/
+
+.clicked {
+  visibility: visible;
+}
+
+.unclicked {
+  visibility: hidden;
+}
+
+/*--------Media query--------*/
+
+/*--------Vertical view--------*/
 
 @media screen and (max-width: 1024px) {
 
@@ -191,7 +203,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   }
 
   .my-main-data {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .show-phone {
@@ -207,8 +219,9 @@ Image(.my-logo), Button(.phone) and some texts*/
   .my-main-data .my-name .attention {
     color: #dc143c;
   }
-
 }
+
+/*--------Horizontal view--------*/
 
 @media screen and (max-height: 480px) {
 
@@ -237,7 +250,7 @@ Image(.my-logo), Button(.phone) and some texts*/
   }
 }
 
-/*Fonts*/
+/*--------Fonts--------*/
 
 @font-face {
   font-family: "Germany";

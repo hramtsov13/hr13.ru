@@ -1,11 +1,13 @@
-/*Show/hide my phone number*/
+/*Let's find WHAT we gonna show by clicking the button*/
 
+let myPhoneNumber = document.querySelector('.my-phone-number');
 
-function showPhoneNumber() {
-  var x = document.getElementById("my-phone-number").style;
-  if (x.visibility == "hidden" || x.visibility == "") {
-    x.visibility = "visible";
-  } else {
-    x.visibility = "hidden";
-  }
+/*Let's find the button*/
+
+let showPhone = document.querySelector('.show-phone');
+
+/*Tell the button how to toggle*/
+
+showPhone.onclick = function () {
+  myPhoneNumber.classList.toggle('unclicked');
 }
