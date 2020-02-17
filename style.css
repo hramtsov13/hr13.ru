@@ -257,7 +257,7 @@ Image(.my-logo), Button(.phone) and some texts*/
     box-shadow:
       0px -4px 40px rgba(255, 255, 255, 0.5),
       inset 0px 2px 80px rgba(255, 255, 255, 0.1),
-      0px 2px 14px rgba(0, 0, 0, 0.15)
+      0px 2px 14px rgba(0, 0, 0, 0.15);
   }
 
   .show-phone:hover {
@@ -271,7 +271,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 /*--------Second section(.container) icludes(left-centered(.container-left-menu) menu block
 and right-centered(.container-right-description) description block --------*/
-
+/*
 .container {
   display: flex;
   flex-direction: row;
@@ -314,7 +314,7 @@ and right-centered(.container-right-description) description block --------*/
   border-color: transparent;
   border-bottom-color: #000;
 }
-
+*/
 /*--------Description--------*/
 /*
 .description-item_about,
@@ -332,4 +332,39 @@ and right-centered(.container-right-description) description block --------*/
   src: url("fonts/Germany/Germany.woff") format("woff"), url("fonts/Germany/Germany.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10vh 0 10vh 10vh;
+}
+
+.container-left-menu,
+.container-right-description {
+  width: 50%;
+}
+
+.container-right-description {
+  border-right: 1px solid #000;
+}
+
+.container-right-description {
+  font-size: 3vh;
+  padding-right: 15vh;
+  line-height: 4vh;
+  text-align: right;
+}
+
+
+.container-left-menu {
+  padding: 2vh;
+  padding-left: 15vh;
+  text-align: left;
+  letter-spacing: 2px;
+  font-size: 3vh;
 }

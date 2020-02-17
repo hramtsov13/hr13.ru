@@ -11,6 +11,7 @@ let showPhone = document.querySelector('.show-phone');
 showPhone.onclick = function () {
   togglePhone.classList.toggle('unclicked');
 }
+
 /*
 let toggleDescription = document.querySelector('.description-item1');
 let toggleDescription = document.querySelector('.description-item2');
