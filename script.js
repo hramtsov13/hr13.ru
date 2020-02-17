@@ -12,6 +12,30 @@ showPhone.onclick = function () {
   togglePhone.classList.toggle('unclicked');
 }
 
+
+//Text toggling
+
+let buttons = document.querySelectorAll('.button');
+
+function hideDescription(selector) {
+  let description = document.querySelector(selector);
+  description.classList.remove("show");
+}
+
+function showDescription(selector) {
+  let description = document.querySelector(selector);
+  description.classList.add("show");
+}
+
+for (let button of buttons) {
+  button.addEventListener("click", function () {
+    hideDescription('.description.show');
+    let descriptionId = button.dataset.descriptionId;
+    showDescription(descriptionId);
+  });
+}
+
+
 /*
 let toggleDescription = document.querySelector('.description-item1');
 let toggleDescription = document.querySelector('.description-item2');
