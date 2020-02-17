@@ -270,61 +270,86 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*--------Second section(.container) icludes(left-centered(.container-left-menu) menu block
 and right-centered(.container-right-description) description block --------*/
 
-body {
-  font-size: 18px;
-  color: rgba(0, 0, 0, .8);
+.main {
+  height: 100%;
+  padding: 10vh 0 5vh 10vh;
 }
 
 .row {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .side {
   box-sizing: border-box;
   width: 50%;
-  padding: 40px;
 }
 
 .side:first-child {
-  background: #ffb6b9;
   text-align: right;
 }
 
 .side:last-child {
-  background: #fae3d9;
   text-align: left;
+  padding-left: 10vh;
+  padding-right: 10vh;
 }
 
 .toggle {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
+    0px -4px 12px rgba(255, 255, 255, 0.5),
+    inset 0px 4px 8px rgba(255, 255, 255, 0.1),
+    0px 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 .button {
   display: block;
-  width: 100%;
-  padding: 10px 20px;
-  font-size: 18px;
+  font-family: "Germany",
+    sans-serif;
+  font-weight: 400;
+  font-size: 1vmax;
+  color: #000;
+  letter-spacing: 2px;
+  background-color: #fff;
   text-align: center;
-  background: #fff;
-  transition: .2s;
-  border: none;
   cursor: pointer;
   outline: none;
+  padding: 20px 15px;
+  border: none;
+  box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
+    0px -4px 40px rgba(255, 255, 255, 0.5),
+    inset 0px 2px 80px rgba(255, 255, 255, 0.1),
+    0px 2px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
 .button:hover {
-  background: rgba(0, 0, 0, .1);
+  color: #00000081;
 }
 
 .button:active {
-  background: rgba(0, 0, 0, .2);
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button:nth-child(2) {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: none;
+  border-right: none;
 }
 
 .description {
   display: none;
   margin: 0;
-  min-height: 140px;
 }
 
 .description.show {
