@@ -12,10 +12,6 @@ body {
   font-family: 'Germany', sans-serif;
 }
 
-body {
-  overflow: hidden;
-}
-
 /*Setting for general block(.root) on the 1st section includes following containers: 
 Image(.my-logo), Button(.phone) and some texts*/
 
@@ -169,10 +165,6 @@ Image(.my-logo), Button(.phone) and some texts*/
 
 /*--------For JS--------*/
 
-.clicked {
-  visibility: visible;
-}
-
 .unclicked {
   visibility: hidden;
 }
@@ -276,6 +268,62 @@ Image(.my-logo), Button(.phone) and some texts*/
     color: #dc143c;
   }
 }
+
+/*--------Second section(.container) icludes(left-centered(.container-left-menu) menu block
+and right-centered(.container-right-description) description block --------*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 10vh;
+}
+
+.container-left-menu,
+.container-right-description {
+  width: 50%;
+}
+
+.container-right-description {
+  padding-left: 20vh;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 10px;
+  box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
+    0px -4px 12px rgba(255, 255, 255, 0.5),
+    inset 0px 4px 8px rgba(255, 255, 255, 0.1),
+    0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-list_root {
+  padding: 2vh;
+  padding-right: 5vh;
+
+}
+
+.menu-list_root-title {
+  font-size: 3vh;
+  color: #000;
+  border-color: transparent;
+  border-bottom-color: #000;
+}
+
+/*--------Description--------*/
+/*
+.description-item_about,
+.description-item_position,
+.description-item_achievments,
+.description-item_example {
+  display: none;
+}
+*/
 
 /*--------Fonts--------*/
 
