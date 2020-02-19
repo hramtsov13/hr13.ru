@@ -296,6 +296,8 @@ and right-centered(.container-right-description) description block --------*/
   text-align: left;
   padding-left: 10vh;
   padding-right: 10vh;
+  font-size: 2.5vh;
+  line-height: 3.5vh;
 }
 
 .toggle {
@@ -319,6 +321,7 @@ and right-centered(.container-right-description) description block --------*/
   letter-spacing: 2px;
   background-color: #fff;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
   outline: none;
   padding: 20px 15px;
@@ -347,6 +350,10 @@ and right-centered(.container-right-description) description block --------*/
   border-right: none;
 }
 
+.button:last-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .description {
   display: none;
   margin: 0;
@@ -356,59 +363,7 @@ and right-centered(.container-right-description) description block --------*/
   display: block;
 }
 
-/*
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
-  padding: 10vh;
-}
 
-.container-left-menu,
-.container-right-description {
-  width: 50%;
-}
-
-.container-right-description {
-  padding-left: 20vh;
-}
-
-.menu-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: 10px;
-  box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
-    0px -4px 12px rgba(255, 255, 255, 0.5),
-    inset 0px 4px 8px rgba(255, 255, 255, 0.1),
-    0px 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.menu-list_root {
-  padding: 2vh;
-  padding-right: 5vh;
-
-}
-
-.menu-list_root-title {
-  font-size: 3vh;
-  color: #000;
-  border-color: transparent;
-  border-bottom-color: #000;
-}
-*/
-/*--------Description--------*/
-/*
-.description-item_about,
-.description-item_position,
-.description-item_achievments,
-.description-item_example {
-  display: none;
-}
-*/
 
 /*--------Fonts--------*/
 
@@ -418,38 +373,3 @@ and right-centered(.container-right-description) description block --------*/
   font-style: normal;
   font-weight: 400;
 }
-
-/*
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 5vh 10vh 0 0;
-}
-
-.container-left-menu,
-.container-right-description {
-  width: 50%;
-}
-
-
-.container-right-description {
-  font-size: 3vh;
-  padding-left: 15vh;
-  line-height: 4vh;
-  text-align: left;
-  letter-spacing: .5px;
-  border-left: 1px solid #000;
-}
-
-
-.container-left-menu {
-  padding: 2vh;
-  padding-right: 15vh;
-  text-align: right;
-  letter-spacing: 2px;
-  font-size: 3vh;
-}
-*/

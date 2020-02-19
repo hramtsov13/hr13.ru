@@ -34,35 +34,3 @@ for (let button of buttons) {
     showDescription(descriptionId);
   });
 }
-
-
-/*
-let toggleDescription = document.querySelector('.description-item1');
-let toggleDescription = document.querySelector('.description-item2');
-let toggleDescription = document.querySelector('.description-item3');
-let toggleDescription = document.querySelector('.description-item4');
-let menuButtonAbout = document.querySelector('.menu-list_root-about');
-let menuButtonPosition = document.querySelector('.menu-list_root-position');
-let menuButtonAchievments = document.querySelector('.menu-list_root-achievments');
-let menuButtonExample = document.querySelector('.menu-list_root-example');
-
-// 1st
-menuButtonAbout.onclick = function () {
-  toggleDescription.classList.toggle('description-item_about');
-}
-
-// 2nd
-menuButton.onclick = function () {
-  toggleDescription.classList.toggle('description-item_position');
-}
-
-// 3rd
-menuButton.onclick = function () {
-  toggleDescription.classList.toggle('description-item_achievments');
-}
-
-// 4th
-menuButton.onclick = function () {
-  toggleDescription.classList.toggle('description-item_example');
-}
-*/
