@@ -6,9 +6,9 @@
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: 'Germany', sans-serif;
 }
 
@@ -74,6 +74,7 @@ Image(.my-logo), Button(.phone) and some texts*/
 }
 
 .show-phone {
+  padding: 20px 15px;
   font-family: "Germany", sans-serif;
   font-weight: 400;
   font-size: 1vmax;
@@ -82,7 +83,6 @@ Image(.my-logo), Button(.phone) and some texts*/
   text-align: center;
   cursor: pointer;
   outline: none;
-  padding: 20px 15px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
@@ -115,18 +115,18 @@ Image(.my-logo), Button(.phone) and some texts*/
 /*--------My main data block(.my-name and .my-description)--------*/
 
 .my-main-data {
-  width: 50%;
-  flex-wrap: wrap;
-  height: 100%;
   position: relative;
+  width: 50%;
+  height: 100%;
+  flex-wrap: wrap;
   padding: 0 5vh;
 }
 
 .my-main-data .my-name {
-  font-size: 1.8vmax;
-  font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
+  font-size: 1.8vmax;
+  font-weight: 400;
 }
 
 .my-main-data .my-name a {
@@ -147,21 +147,25 @@ Image(.my-logo), Button(.phone) and some texts*/
   font-size: 1.5vmax;
 }
 
+.my-main-data .my-name .attention.lucky-number:hover {
+  color: #000
+}
+
 .my-main-data .my-description {
+  align-self: center;
+  margin: 0;
+  margin-bottom: 5px;
   font-size: 1.2vmax;
   font-weight: 400;
   color: #00000081;
-  margin: 0;
-  align-self: center;
-  margin-bottom: 5px;
 }
 
 .my-phone-number {
-  text-decoration: none;
-  font-size: 1.7vmax;
-  color: #dc143c;
   margin: 0;
   bottom: 0;
+  color: #dc143c;
+  font-size: 1.7vmax;
+  text-decoration: none;
 }
 
 /*--------For JS--------*/
@@ -170,23 +174,150 @@ Image(.my-logo), Button(.phone) and some texts*/
   visibility: hidden;
 }
 
+/*--------Second section(.main) icludes(left-positioned(.side with .toggle buttons) menu block
+and right-positioned(.side with .description) description block --------*/
+
+.main {
+  height: 100%;
+  padding: 10vh 0 5vh 10vh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.side {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/*Left side*/
+
+.side:first-child {
+  text-align: right;
+}
+
+/*Right side*/
+
+.side:last-child {
+  text-align: left;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  font-size: 3vh;
+  line-height: 3.5vh;
+}
+
+/*Buttons container*/
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
+    0px -4px 12px rgba(255, 255, 255, 0.5),
+    inset 0px 4px 8px rgba(255, 255, 255, 0.1),
+    0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button {
+  display: block;
+  font-family: "Germany",
+    sans-serif;
+  font-weight: 400;
+  font-size: 1vmax;
+  color: #000;
+  letter-spacing: 2px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  padding: 20px 15px;
+  border: none;
+  box-shadow: none;
+}
+
+.button:hover {
+  color: #00000081;
+}
+
+.button:active {
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button:nth-child(2) {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: none;
+  border-right: none;
+}
+
+.button:last-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/*Description show/hide*/
+
+.description {
+  display: none;
+  margin: 0;
+}
+
+.description:nth-child(3),
+.description:nth-child(4) {
+  text-align: center;
+}
+
+.description.show {
+  display: block;
+}
+
+/*CV and M. Letter links*/
+
+.description .download {
+  position: relative;
+  cursor: pointer;
+  color: #000;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/*Animated line under the link*/
+
+.description .download:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.18);
+  transition: width 0.3s ease-out;
+}
+
+.description .download:hover:after,
+.description .download:focus:after {
+  width: 100%;
+}
+
 /*--------Media query--------*/
 
 /*--------Vertical view--------*/
 
 @media screen and (max-width: 1024px) {
 
-  body {
-    overflow: scroll;
-  }
-
   .root {
     flex-direction: column-reverse;
     justify-content: flex-end;
-    padding: 5vh;
     width: 100%;
     height: unset;
-    padding: 10vh 2vh;
+    padding: 10vh 2vh 10vh 2vh;
   }
 
   .section,
@@ -196,13 +327,13 @@ Image(.my-logo), Button(.phone) and some texts*/
 
   .show-phone {
     padding: 15px 7px;
-    font-size: 1.2vmax;
     border: none;
     border-radius: 10px;
     box-shadow:
       0px -4px 40px rgba(255, 255, 255, 0.5),
       inset 0px 2px 80px rgba(255, 255, 255, 0.1),
-      0px 2px 14px rgba(0, 0, 0, 0.15)
+      0px 2px 14px rgba(0, 0, 0, 0.15);
+    font-size: 1.3vmax;
   }
 
   .show-phone:hover {
@@ -231,6 +362,112 @@ Image(.my-logo), Button(.phone) and some texts*/
 
   .my-phone-number {
     font-size: 1.9vmax;
+  }
+
+  .main {
+    width: 100%;
+    height: unset;
+    padding: 2vh;
+  }
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+    height: unset;
+  }
+
+  .side {
+    width: 100%;
+  }
+
+  /*Left side*/
+
+  .side:first-child {
+    text-align: right;
+  }
+
+  /*Right side*/
+
+  .side:last-child {
+    text-align: left;
+    padding-top: 2vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    font-size: 2vh;
+    line-height: 3.5vh;
+  }
+
+  /*Buttons container*/
+
+  .toggle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
+      0px -4px 12px rgba(255, 255, 255, 0.5),
+      inset 0px 4px 8px rgba(255, 255, 255, 0.1),
+      0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .button {
+    width: 25%;
+    font-size: 1.3vmax;
+  }
+
+  .button:nth-child(2) {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: none;
+    border-right: none;
+  }
+
+  .button:last-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /*Description show/hide*/
+
+  .description {
+    display: none;
+    margin: 0;
+  }
+
+  .description:nth-child(3),
+  .description:nth-child(4) {
+    text-align: center;
+  }
+
+  .description.show {
+    display: block;
+  }
+
+  /*CV and M. Letter links*/
+
+  .description .download {
+    position: relative;
+    cursor: pointer;
+    color: #000;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  /*Animated line under the link*/
+
+  .description .download:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.18);
+    transition: width 0.3s ease-out;
+  }
+
+  .description .download:hover:after,
+  .description .download:focus:after {
+    width: 100%;
   }
 }
 
@@ -266,103 +503,6 @@ Image(.my-logo), Button(.phone) and some texts*/
     color: #dc143c;
   }
 }
-
-/*--------Second section(.container) icludes(left-centered(.container-left-menu) menu block
-and right-centered(.container-right-description) description block --------*/
-
-.main {
-  height: 100%;
-  padding: 10vh 0 5vh 10vh;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.side {
-  box-sizing: border-box;
-  width: 50%;
-}
-
-.side:first-child {
-  text-align: right;
-}
-
-.side:last-child {
-  text-align: left;
-  padding-left: 10vh;
-  padding-right: 10vh;
-  font-size: 2.5vh;
-  line-height: 3.5vh;
-}
-
-.toggle {
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 0px -4px 8px rgba(255, 255, 255, 1),
-    0px -4px 12px rgba(255, 255, 255, 0.5),
-    inset 0px 4px 8px rgba(255, 255, 255, 0.1),
-    0px 4px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-}
-
-.button {
-  display: block;
-  font-family: "Germany",
-    sans-serif;
-  font-weight: 400;
-  font-size: 1vmax;
-  color: #000;
-  letter-spacing: 2px;
-  background-color: #fff;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  padding: 20px 15px;
-  border: none;
-  box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
-    0px -4px 40px rgba(255, 255, 255, 0.5),
-    inset 0px 2px 80px rgba(255, 255, 255, 0.1),
-    0px 2px 14px rgba(0, 0, 0, 0.15);
-  box-shadow: none;
-}
-
-.button:hover {
-  color: #00000081;
-}
-
-.button:active {
-  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
-    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.button:nth-child(2) {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-left: none;
-  border-right: none;
-}
-
-.button:last-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.description {
-  display: none;
-  margin: 0;
-}
-
-.description.show {
-  display: block;
-}
-
 
 
 /*--------Fonts--------*/
