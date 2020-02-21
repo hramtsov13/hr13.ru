@@ -12,7 +12,6 @@ showPhone.onclick = function () {
   togglePhone.classList.toggle('unclicked');
 }
 
-
 //Text toggling
 
 let buttons = document.querySelectorAll('.button');
