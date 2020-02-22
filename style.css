@@ -229,7 +229,7 @@ and right-positioned(.side with .description) description block --------*/
   font-family: "Germany",
     sans-serif;
   font-weight: 400;
-  font-size: 1vmax;
+  font-size: 1.5vh;
   color: #000;
   letter-spacing: 2px;
   background-color: #fff;
@@ -333,7 +333,7 @@ and right-positioned(.side with .description) description block --------*/
       0px -4px 40px rgba(255, 255, 255, 0.5),
       inset 0px 2px 80px rgba(255, 255, 255, 0.1),
       0px 2px 14px rgba(0, 0, 0, 0.15);
-    font-size: 1.3vmax;
+    font-size: 1.5vh;
   }
 
   .show-phone:hover {
@@ -366,7 +366,7 @@ and right-positioned(.side with .description) description block --------*/
 
   .main {
     width: 100%;
-    height: unset;
+    height: 90%;
     padding: 2vh;
   }
 
@@ -390,10 +390,10 @@ and right-positioned(.side with .description) description block --------*/
 
   .side:last-child {
     text-align: left;
-    padding-top: 2vh;
+    padding-top: 3vh;
     padding-left: 1vh;
     padding-right: 1vh;
-    font-size: 2vh;
+    font-size: 3vh;
     line-height: 3.5vh;
   }
 
@@ -413,17 +413,18 @@ and right-positioned(.side with .description) description block --------*/
 
   .button {
     width: 25%;
-    font-size: 1.3vmax;
+    font-size: 1.3vh;
   }
 
   .button:nth-child(2) {
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-left: none;
-    border-right: none;
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .button:last-child {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: none;
   }
 
   /*Description show/hide*/
