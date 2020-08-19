@@ -1,5 +1,7 @@
+//Swup - ajax init
 const swup = new Swup();
 
+//Slick slider config
 $(document).ready(function () {
   $(".facts__slider").slick({
     arrows: true,
@@ -49,5 +51,3 @@ document.addEventListener("swup:contentReplaced", (event) => {
     });
   });
 });
-
-swup.on("contentReplaced", init);
