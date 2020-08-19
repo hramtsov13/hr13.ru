@@ -42,8 +42,8 @@ const compileScript = () => {
 
       "app/libs/jquery-3.5.1.min.js",
       "app/libs/bootstrap.min.js",
-      "app/libs/swup.min.js",
       "app/libs/slick.min.js",
+      "app/libs/swup.min.js",
       "app/js/script.js",
     ])
     .pipe(concat("scripts.min.js"))

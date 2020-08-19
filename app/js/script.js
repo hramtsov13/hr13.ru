@@ -1,3 +1,5 @@
+const swup = new Swup();
+
 $(document).ready(function () {
   $(".facts__slider").slick({
     arrows: true,
@@ -21,5 +23,3 @@ $(document).ready(function () {
     appendArrows: $(".slider__arrow"),
   });
 });
-
-const swup = new Swup();
