@@ -60,7 +60,7 @@ const compileStyle = () => {
   var plugins = [autoprefixer(), cssnano()];
 
   return gulp
-    .src(["app/less/styles.less"])
+    .src(["app/less/styles.less", "app/libs/bootstrap.css"])
     .pipe(
       less({
         outputStyle: "expand",
