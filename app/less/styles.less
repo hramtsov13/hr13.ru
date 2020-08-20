@@ -27,6 +27,8 @@ body {
   }
 }
 
+
+
 .navbar {
   background-color: #fff;
   border-bottom-right-radius: 10px;
@@ -268,6 +270,7 @@ html.is-animating .transition-fade {
 
 .portfolio__item {
   display: flex;
+  align-items: center;
   margin: 50px 0;
 
   .portfolio__image {
@@ -275,6 +278,10 @@ html.is-animating .transition-fade {
     height: 75vh;
     overflow: scroll;
     border-radius: 10px;
+    box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
+      0px -4px 40px rgba(255, 255, 255, 0.5),
+      inset 0px 2px 80px rgba(255, 255, 255, 0.1),
+      0px 2px 14px rgba(0, 0, 0, 0.15);
 
     .item__image {
       width: 100%;
@@ -282,7 +289,6 @@ html.is-animating .transition-fade {
   }
 
   .portfolio__description {
-    margin-top: 30px;
     margin-left: 30px;
     width: 50%;
 
@@ -294,9 +300,26 @@ html.is-animating .transition-fade {
     & p {
       color: rgba(0, 0, 0, 0.6);
       text-align: left;
+
+      & a {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      & a:hover {
+        color: #dc143c;
+        text-decoration: none;
+        transition: 0.6s;
+      }
+
+      code {
+        color: #dc143c;
+      }
     }
 
     & p:first-letter {
+      font-size: 22px;
+      line-height: 0;
+      font-weight: 500;
       color: #dc143c;
     }
   }
@@ -322,7 +345,9 @@ html.is-animating .transition-fade {
   }
 }
 
+//MEDIA QUERY
 @media (max-width: 575.98px) {
+
   .contacts__header,
   .portfolio__header,
   .cv__header {
