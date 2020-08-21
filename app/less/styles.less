@@ -5,6 +5,7 @@
 }
 
 body {
+  padding-top: 56px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,6 +25,7 @@ body {
     transform: scale(0.95);
     box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1), inset -2px -2px 12px rgba(255, 255, 255, 0.5),
       inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
   }
 }
 
@@ -128,6 +130,12 @@ body {
   height: 56px;
   z-index: 14;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.6s;
+    transform: scale(1.1);
+  }
 }
 
 .slider__arrow .slick-arrow.slick-prev {
@@ -160,27 +168,33 @@ body {
 
   & h3 {
     margin: 0;
-    font-size: 3em;
+    font-size: 44px;
     font-weight: 500;
     line-height: 38px;
   }
 
   & p {
     margin: 0 0 10px 0;
-    font-size: 18px;
-    font-weight: 500;
+    font-family: "Forum", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
   }
 }
 
 .slider__image {
   border-radius: 10px;
   width: 100%;
+  transition: 0.6s;
   filter: grayscale(100%), contrast(15%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   -webkit-filter: grayscale(1);
+
+  &:hover {
+    filter: none;
+  }
 }
 
 .slider__item::before {
@@ -209,7 +223,7 @@ html.is-animating .transition-fade {
 
 //Contacts page
 .contacts__header {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .contacts__slogan {
@@ -265,18 +279,19 @@ html.is-animating .transition-fade {
 //Portfolio page
 
 .portfolio__header {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .portfolio__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 50px 0;
 
   .portfolio__image {
     width: 50%;
     height: 75vh;
-    overflow: scroll;
+    max-height: 500px;
+    overflow-y: auto;
     border-radius: 10px;
     box-shadow: 0 -4px 100px rgba(255, 255, 255, 1),
       0px -4px 40px rgba(255, 255, 255, 0.5),
@@ -290,16 +305,21 @@ html.is-animating .transition-fade {
 
   .portfolio__description {
     margin-left: 30px;
+    margin-top: 50px;
     width: 50%;
 
+
     & h3 {
-      font-size: 48px;
+      font-size: 44px;
       font-weight: 500;
     }
 
     & p {
       color: rgba(0, 0, 0, 0.6);
       text-align: left;
+      font-family: "Forum", sans-serif;
+      font-size: 20px;
+      line-height: 24px;
 
       & a {
         color: rgba(0, 0, 0, 0.6);
@@ -326,7 +346,7 @@ html.is-animating .transition-fade {
 }
 
 .cv__header {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .cv__info {
@@ -348,11 +368,39 @@ html.is-animating .transition-fade {
 //MEDIA QUERY
 @media (max-width: 575.98px) {
 
-  .contacts__header,
+  .cv__header,
   .portfolio__header,
-  .cv__header {
-    margin-top: 76px;
+  .contacts__header {
+    margin-top: 15px;
   }
+
+  .main__text {
+    margin-top: 20px;
+
+    .text__item {}
+
+    .text__item:first-child {
+      font-size: 48px;
+      line-height: 40px;
+    }
+
+    .text__item:last-child {
+      margin-top: 15px;
+      font-size: 22px;
+    }
+  }
+
+  .main__image {
+    overflow: hidden;
+
+    .image {
+      max-width: 100%;
+    }
+  }
+
+
+
+
 
   .contacts__slogan {
     margin-top: 50px;
@@ -407,4 +455,11 @@ html.is-animating .transition-fade {
   font-style: normal;
   font-weight: 500;
   src: local("Montserrat-SemiBold"), url("./../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Forum";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Forum"), url("./../fonts/Forum.ttf");
 }
