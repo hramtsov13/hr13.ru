@@ -9,6 +9,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding-bottom: 50px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
 // Common components
 
 .button {
@@ -395,8 +407,15 @@ html.is-animating .transition-fade {
 
 // Footer
 
+.footer {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 0 -4px 100px rgba(255, 255, 255, 1), 0px 2px 14px rgba(0, 0, 0, 0.15), inset 0px 2px 80px rgba(255, 255, 255, 0.1), 0px -4px 40px rgba(255, 255, 255, 0.5);
+  ;
+}
+
 .footer__contacts {
-  margin-top: 100px;
+  margin-top: 50px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
