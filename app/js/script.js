@@ -52,11 +52,4 @@ document.addEventListener("swup:contentReplaced", (event) => {
   });
 });
 
-window.onscroll = function () {
-  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrolled > 500) {
-    document.getElementById("facts").addClass("visible animate__animated animate__fadeInRight");
-  } else {
-    document.getElementById("facts").addClass("hidden");
-  }
-};
+new WOW().init();
