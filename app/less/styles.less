@@ -136,14 +136,14 @@ main {
   }
 }
 
-.facts {
+.projects {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 124px;
 }
 
-.facts__slider {
+.projects__slider {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -324,7 +324,6 @@ html.is-animating .transition-fade {
 
   .portfolio__image {
     width: 50%;
-    height: 75vh;
     max-height: 500px;
     overflow-y: auto;
     border-radius: 10px;
@@ -334,6 +333,7 @@ html.is-animating .transition-fade {
       0px 2px 14px rgba(0, 0, 0, 0.15);
 
     .item__image {
+      border: 0;
       width: 100%;
     }
   }
@@ -356,16 +356,6 @@ html.is-animating .transition-fade {
       font-size: 20px;
       line-height: 24px;
 
-      & a {
-        color: rgba(0, 0, 0, 0.6);
-      }
-
-      & a:hover {
-        color: #dc143c;
-        text-decoration: none;
-        transition: 0.6s;
-      }
-
       code {
         color: #dc143c;
         font-weight: 200;
@@ -377,6 +367,27 @@ html.is-animating .transition-fade {
       line-height: 0;
       font-weight: 500;
       color: #dc143c;
+    }
+
+    & a {
+      color: rgba(0, 0, 0, 0.6);
+
+      &:hover {
+        color: #dc143c;
+        text-decoration: none;
+        transition: 0.6s;
+      }
+    }
+
+    cite {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+
+      a {
+        font-style: italic;
+        font-weight: 400;
+      }
     }
   }
 }
